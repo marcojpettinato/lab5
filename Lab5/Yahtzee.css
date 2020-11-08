@@ -1,0 +1,32 @@
+/*
+	Marco Pettinato
+	CPSC-44000 Software Engineering
+	Sprint 1
+	Fall 2020
+*/
+
+table {
+	border-color: crimson;
+	border-style: solid;
+}
+tr, td, th {
+	border-color: gray;
+	border-style: solid;
+}
+.dice {
+	border-color: gray;
+	border-style: solid;
+	margin: 5px;
+	padding: 5px;
+}
+.cell {
+	cursor: pointer;
+}
+.strike {
+	text-decoration: line-through;
+	cursor: default;
+	background-color: gray;
+}
+input {
+	margin: 9px;
+}
