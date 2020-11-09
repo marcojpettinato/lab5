@@ -40,12 +40,12 @@
     min-height: 100%;
     opacity: 0.7;
 }
-#sprint2 { background-image: url("images/desert-canyon.jpg"); }
-#sprint3 { background-image: url("images/moutain-reflection.jpg"); }
-#sprint4 { background-image: url("images/mt-fuji.jpg"); }
-#sprint5 { background-image: url("images/river-valley.jpg"); }
-#sprint6 { background-image: url("images/desert-stars.jpg"); }
-#sprint7 { background-image: url("images/icy-lake-mountain.jpg"); }
+#sprint2 { background-image: url("Lab5/images/desert-canyon.jpg"); }
+#sprint3 { background-image: url("Lab5/images/moutain-reflection.jpg"); }
+#sprint4 { background-image: url("Lab5/images/mt-fuji.jpg"); }
+#sprint5 { background-image: url("Lab5/images/river-valley.jpg"); }
+#sprint6 { background-image: url("Lab5/images/desert-stars.jpg"); }
+#sprint7 { background-image: url("Lab5/images/icy-lake-mountain.jpg"); }
 #sprint8 { background-image: url("images/"); }
 
 .heading {
