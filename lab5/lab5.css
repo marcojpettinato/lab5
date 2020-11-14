@@ -1,0 +1,99 @@
+/*
+    Author: Marco Pettinato
+    Class: Software Engineering
+    Project: Landing Page 
+    Description: CPSC-44000 Landing Page
+*/
+
+* {
+    margin: 0px;
+    font-family: "Comfortaa", cursive;
+    scroll-behavior: smooth;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.parallax-text {
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    top: 35%;
+    z-index: 2;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+#blueSkyVideo {
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.7;
+}
+#sprint2 { background-image: url("Lab5/images/desert-canyon.jpg"); }
+#sprint3 { background-image: url("Lab5/images/moutain-reflection.jpg"); }
+#sprint4 { background-image: url("Lab5/images/mt-fuji.jpg"); }
+#sprint5 { background-image: url("Lab5/images/river-valley.jpg"); }
+#sprint6 { background-image: url("Lab5/images/desert-stars.jpg"); }
+#sprint7 { background-image: url("Lab5/images/icy-lake-mountain.jpg"); }
+#sprint8 { background-image: url("images/"); }
+
+.heading {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    letter-spacing: 8px;
+    font-weight: 400;
+}
+
+.text-title {
+    font-size: 30px;
+    text-align: center;
+    padding: 60px;
+    margin: 40px;
+}
+.text-detail {
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+.text-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.sprint {
+    background-color: black;
+    font-size: 36px;
+    padding: 20px;
+    margin: 6px;
+    text-align: center;
+    color: #f5f5f5;
+    letter-spacing: 8px;
+    z-index: 2;
+    width: auto;
+    top: 40%;
+    left: 42%;
+    border-radius: 16px;
+}
+
+
+a:link { text-decoration: underline; color: black; }
+a:visited { text-decoration: none; color: black; }
+a:hover { text-decoration: underline; color: #808080; }
+a:active { text-decoration: none; color: black; }
+
+.footer {
+    padding: 100px;
+    margin: 100px;
+}

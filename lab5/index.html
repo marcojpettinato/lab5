@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        Author: Marco Pettinato
+        Class: Software Engineering
+        Project: Landing Page 
+        Description: CPSC-44000 Landing Page
+    -->
+
+    <!-- The top of file index.html -->
+    <html itemscope itemtype="http://schema.org/Article">
+    <head>
+    <!-- BEGIN Pre-requisites -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+        </script>
+        <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+        </script>
+    <!-- END Pre-requisites -->
+    <script>
+        function start() {
+          gapi.load('auth2', function() 
+          {
+            auth2 = gapi.auth2.init(
+            {
+              client_id: '473179689529-n91i83j7u6nq30k3p2ofdn3gbsmitoa4.apps.googleusercontent.com',
+              // Scopes to request in addition to 'profile' and 'email'
+              //scope: 'additional_scope'
+            });
+          });
+        }
+      </script>
+        <title>Marco Pettinato's Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, 
+        initialscale=1">
+        <script src="Lab5/landing-page.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" 
+        rel="stylesheet">
+        <link rel="stylesheet" href="lab5.css">
+        <button id="signinButton">Sign in with Google</button>
+        <script>
+        $('#signinButton').click(function() 
+    {
+        // signInCallback defined in step 6.
+        auth2.grantOfflineAccess().then(signInCallback);
+    });
+</script>
+    </head>
+    <body>
+        <div class="parallax">
+            <div class="parallax-text">
+                <h1 class="heading">Marco Pettinato</h1>
+                <h1 class="heading">Software Enngineering Landing Page</h1>
+            </div>
+            <video autoplay muted loop id="blueSkyVideo">
+                <source src="videos/blue-sky-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div>
+            <div class="text-title fade-in">
+                <h2>Jump to Sprint</h2>
+            </div>
+            <div>
+                <h3 class="text-detail fade-in"><a href="#sprint1">Sprint 1</a></h3>
+                <h3 class="text-detail fade-in"><a href="#sprint2">Sprint 2</a></h3>
+                <h3 class="text-detail fade-in"><a href="#sprint3">Sprint 3</a></h3>
+                <h3 class="text-detail fade-in"><a href="#sprint4">Sprint 4</a></h3>
+                <h3 class="text-detail fade-in"><a href="#sprint5">Sprint 5</a></h3>
+                <h3 class="text-detail fade-in"><a href="#sprint6">Sprint 6</a></h3>
+                <h3 class="text-detail fade-in">Sprint 7</h3>
+                <h3 class="text-detail fade-in">Sprint 8</h3>
+            </div>
+        </div>
+        
+        <div class="parallax" id="sprint1">
+          <h2 class="sprint parallax-text fade-in">Sprint 1</h2>
+      </div>
+
+      <div>
+          <h3 class="text-detail fade-in"><a href="Lab5/my_fav_hobby_home.html" 
+              target="_blank">Favorite Hobbies</a></h3>
+      </div>
+        
+
+        <div class="parallax" id="sprint2">
+            <h2 class="sprint parallax-text fade-in">Sprint 2</h2>
+        </div>
+
+        <div>
+            <h3 class="text-detail fade-in"><a href="Lab5/index.html" 
+                target="_blank">Sprint 2 Index Page</a></h3>
+        </div>
+
+        <div class="parallax" id="sprint3">
+            <h2 class="sprint parallax-text fade-in">Sprint 3</h2>
+        </div>
+
+        <div>
+            <h3 class="text-detail fade-in"> <img src="Checks\index.jpg" style="height:400px;width:600px;margin:auto;" class="center"> Node Hello World from tutorials</a></h3>
+            <h3 class="text-detail fade-in"> <img src="Checks\world.jpg" style="height:400px;width:600px;margin:auto;" class="center"> Node Hello World from class</a></h3>
+        </div>
+
+        <div class="parallax" id="sprint4">
+            <h2 class="sprint parallax-text fade-in">Sprint 4</h2>
+        </div>
+
+        <div>
+            <h3 class="text-detail fade-in"><a href="sprint4/brown-ch4-pjb/" 
+                target="_blank">Brown Chapter 4 Exercise</a></h3>
+        </div>
+
+        <div class="parallax" id="sprint5">
+            <h2 class="sprint parallax-text fade-in">Sprint 5</h2>
+        </div>
+
+        <div>
+            <h3 class="text-detail fade-in">Final Project Webstie Coming soon...</h3>
+        </div>
+
+        <div class="parallax" id="sprint6">
+            <h2 class="sprint parallax-text fade-in">Sprint 6</h2>
+        </div>
+
+        <div>
+            <h3 class="text-detail fade-in">Coming soon...</h3>
+        </div>
+
+
+        <div class="footer">
+
+        </div>
+
+        
+
+        <script>
+            function signInCallback(authResult) 
+            {
+              if (authResult['code']) 
+              {
+            
+                // Hide the sign-in button now that the user is authorized, for example:
+                $('#signinButton').attr('style', 'display: none');
+            
+                // Send the code to the server
+                $.ajax(
+                {
+                  type: 'POST',
+                  url: 'http://example.com/storeauthcode',
+                  // Always include an `X-Requested-With` header in every AJAX request,
+                  // to protect against CSRF attacks.
+                  headers: 
+                  {
+                    'X-Requested-With': 'XMLHttpRequest'
+                  },
+                  contentType: 'application/octet-stream; charset=utf-8',
+                  success: function(result) 
+                  {
+                    // Handle or verify the server response.
+                  },
+                  processData: false,
+                  data: authResult['code']
+                });
+              } 
+              
+              else 
+              {
+                // There was an error.
+              }
+            }
+            </script>
+</script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+/*
+	Marco Pettinato
+	CPSC-24700 Software Engineering
+	Sprint 1
+	Fall 2020
+*/
+
+/* This makes the whole body of the page have verdana font. */
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: red;
+}
+h1 {
+    font-size: 250%;
+    padding: 10px; 
+}
+h2 {
+	font-size: 150%;
+}
+h3 {
+	font-size: 150%;
+	padding-top: 500px;
+}
+p {
+	font-size: 110%; 
+}
+
+/* This is the styling that allows the list 
+   to become a navigation bar. */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+	position: sticky;
+	top: 0;
+}
+li {
+	float: left;
+}
+li a {
+	display: block;
+	color: white;
+	font-size: 110%;
+	text-align: center;
+	padding: 26px;
+	text-decoration: none;
+}
+li a:hover {
+	background-color: #111111;
+	text-decoration: none;
+}
+.active {
+	background-color: #1D34A8;
+}
+
+/* This makes hyperlinks have no underline unless 
+   you hover over it or it is active. */
+a:link {
+    text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+    text-decoration: underline;
+}
+
+/* This creates the table and formats it. */
+table{
+	font-family: arial;
+  	border-collapse: collapse;
+  	width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* This creates the transition used on the "back to top" hyperlink. */
+div {
+	border-radius: 25px;
+	padding: 20px;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	background: darkblue;
+	margin: auto;
+	transition: width 2s;
+	transition-timing-function: ease;
+}
+div:hover {
+	width: 200px;
+	background: tomato;
+}
+
+/* This allows for the pictures to be centered. */
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
